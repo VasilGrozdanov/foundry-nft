@@ -4,7 +4,7 @@ pragma solidity ^0.8.18;
 import {Test} from "forge-std/Test.sol";
 import {console2} from "forge-std/Script.sol";
 import {BasicNft} from "src/BasicNft.sol";
-import {DeployBasicNft} from "script/DeployBasicNFT.s.sol";
+import {DeployBasicNft} from "script/DeployBasicNft.s.sol";
 
 contract BasicNFTTest is Test {
     address public USER = makeAddr("User");
