@@ -65,7 +65,7 @@ git clone https://github.com/VasilGrozdanov/merkle-aidrop.git
 ## 🛠️ Usage
 
 ### 🔨 Build
-Use the [Makefile](https://github.com/VasilGrozdanov/merkle-aidrop/blob/main/Makefile) commands **(📝 note: Make sure you have GNU Make installed and add the necessary environment variables in a `.env` file)**, or alternatively foundry commands:
+Use the [Makefile](https://github.com/VasilGrozdanov/foundry-nft/blob/main/Makefile) commands **(📝 note: Make sure you have GNU Make installed and add the necessary environment variables in a `.env` file)**, or alternatively foundry commands:
 ```shell
 $ forge build
 ```
@@ -95,15 +95,24 @@ $ anvil
 ```
 
 ### 🚀 Deploy
-
+ BasicNft:
 ```shell
-$ forge script script/DeployRaffle.s.sol --rpc-url <your_rpc_url> --private-key <your_private_key> --broadcast
+$ forge script script/DeployBasicNft.s.sol --rpc-url <your_rpc_url> --private-key <your_private_key> --broadcast
+```
+MoodNft:
+```shell
+$ forge script script/DeployMoodNft.s.sol --rpc-url <your_rpc_url> --private-key <your_private_key> --broadcast
 ```
 > ⚠️ **Warning: Using your private key on a chain associated with real money must be avoided!**
 
  OR
+ BasicNft:
 ```shell
-$ forge script script/DeployRaffle.s.sol --rpc-url <your_rpc_url> --account <your_account> --broadcast
+$ forge script script/DeployBasicNft.s.sol --rpc-url <your_rpc_url> --account <your_account> --broadcast
+```
+MoodNft:
+```shell
+$ forge script script/DeployMoodNft.s.sol --rpc-url <your_rpc_url> --account <your_account> --broadcast
 ```
 > 📝 **Note: Using your --account requires adding wallet first, which is more secure than the plain text private key!**
 ```Bash
